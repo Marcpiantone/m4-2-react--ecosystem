@@ -139,6 +139,14 @@ function IconButton(props) {
 ### Exercise 3
 
 ```css
+const Paragraph = styled.p`
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+  strong {
+    color: red;}
+  em {color: #666;}
+`
 .paragraph {
   font-size: 18px;
   line-height: 1.4;
@@ -158,10 +166,10 @@ function IconButton(props) {
 function FantasticStory(props) {
   return (
     <div>
-      <p className="paragraph">
+      <Paragraph className="paragraph">
         The <strong>quick</strong> red fox jumped over the <em>lazy</em> dog.
-      </p>
-      <p>The end.</p>
+      </Paragraph>
+      <Paragraph>The end.</Paragraph>
     </div>
   );
 }
@@ -174,7 +182,7 @@ function FantasticStory(props) {
 ```jsx
 import {createGlobalStyles} from 'styled-components';
 
-const GlobalStyles = createGlobalStyles`
+const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Lato', sans-serif;
   }
