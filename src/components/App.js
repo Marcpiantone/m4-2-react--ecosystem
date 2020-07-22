@@ -4,18 +4,22 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "../globalstyles";
 
 import Header from "./Header.js";
+import Homepage from "./Homepage.js";
+import About from "./About";
 
 const App = (props) => {
   console.log(props);
   return (
     <Router>
       <GlobalStyle />
-      <Header></Header>
+      <Header />
       <Switch>
         <Route exact path="/">
-          Homepage
+          <Homepage />
         </Route>
-        <Route path="/about">About</Route>
+        <Route path="/about">
+          <About />
+        </Route>
       </Switch>
     </Router>
   );
