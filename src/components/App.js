@@ -6,9 +6,9 @@ import GlobalStyle from "../globalstyles";
 import Header from "./Header.js";
 import Homepage from "./Homepage.js";
 import About from "./About";
+import ItemDetails from "./ItemDetails  ";
 
-const App = (props) => {
-  console.log(props);
+const App = (sellers, items) => {
   return (
     <Router>
       <GlobalStyle />
@@ -19,6 +19,9 @@ const App = (props) => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/items/:itemId">
+          <ItemDetails />
         </Route>
       </Switch>
     </Router>

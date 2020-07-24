@@ -2,8 +2,13 @@ import React from "react";
 
 import { Text } from "../globalstyles";
 import { Bold } from "../globalstyles";
+import LisingGrid from "./ListingGrid ";
 
-const Homepage = (props) => {
+import { items } from "../data";
+import ListingGrid from "./ListingGrid ";
+
+const Homepage = () => {
+  const list = Object.values(items);
   return (
     <>
       <Text>
@@ -12,6 +17,7 @@ const Homepage = (props) => {
       <Text>
         <Bold>Browse items:</Bold>
       </Text>
+      <ListingGrid list={list} />
     </>
   );
 };

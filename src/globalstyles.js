@@ -6,9 +6,8 @@ body {font-family: "Raleway", sans-serif; margin: 40px; font-size: 25px}`;
 
 const Text = styled.p``;
 
-const Bold = styled.p`
+const Bold = styled.span`
   font-weight: bolder;
-  display: inline;
 `;
 
 export default GlobalStyle;
