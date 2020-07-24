@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import ItemDetails from "./ItemDetails";
-
 const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
