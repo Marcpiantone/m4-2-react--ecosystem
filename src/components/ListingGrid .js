@@ -19,6 +19,7 @@ const Pic = styled.img`
 `;
 
 const Description = styled.div`
+  color: black;
   font-size: 40px;
   display: block;
   font-weight: bolder;
@@ -40,6 +41,7 @@ const Item = styled.div`
   -webkit-box-shadow: 0px 0px 20px 2px rgba(204, 204, 204, 1);
   -moz-box-shadow: 0px 0px 20px 2px rgba(204, 204, 204, 1);
   box-shadow: 0px 0px 20px 2px rgba(204, 204, 204, 1);
+  text-decoration: none;
 `;
 
 const ListingGrid = ({ list }) => {
@@ -51,9 +53,9 @@ const ListingGrid = ({ list }) => {
           <Item>
             <Link key={item.id} to={`/items/${item.name}`}>
               <Pic src={item.imageSrc} />
+              <Description>{item.name}</Description>
+              <LatinDescription>{item.latinName}</LatinDescription>
             </Link>
-            <Description>{item.name}</Description>
-            <LatinDescription>{item.latinName}</LatinDescription>
           </Item>
         );
       })}
