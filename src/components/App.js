@@ -6,7 +6,7 @@ import GlobalStyle from "../globalstyles";
 import Header from "./Header.js";
 import Homepage from "./Homepage.js";
 import About from "./About";
-// import ItemDetails from "./ItemDetails  ";
+import ItemDetails from "./ItemDetails";
 
 const App = (sellers, items) => {
   return (
@@ -20,7 +20,9 @@ const App = (sellers, items) => {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/items/:itemId">{/* <ItemDetails /> */}</Route>
+        <Route path="/items/:itemId">
+          <ItemDetails />
+        </Route>
       </Switch>
     </Router>
   );

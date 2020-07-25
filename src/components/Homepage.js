@@ -2,7 +2,7 @@ import React from "react";
 
 import { Text } from "../globalstyles";
 import { Bold } from "../globalstyles";
-import ListingGrid from "./ListingGrid ";
+import LisingGrid from "./ListingGrid ";
 
 import { items } from "../data";
 
