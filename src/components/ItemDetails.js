@@ -33,9 +33,7 @@ const Origin = styled.p`
   font-style: italic;
 `;
 
-const ButtonSection = styled.section`
-  margin: 30px;
-`;
+const ButtonSection = styled.section``;
 
 const Button = styled.button`
   border-radius: 15px;
@@ -47,6 +45,7 @@ const Button = styled.button`
 `;
 
 const Seller = styled.section`
+  margin-top: 20px;
   display: flex;
 `;
 const SoldBy = styled.p`

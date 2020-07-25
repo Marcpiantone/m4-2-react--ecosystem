@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const HeaderBox = styled.header`
   display: flex;
@@ -16,27 +16,33 @@ const Logo = styled.p`
 
 const Linkbox = styled.div`
   justify-content: flex-end;
+`;
+
+const Links = styled(NavLink)`
   font-weight: bolder;
   font-size: 20px;
-  a {
-    text-decoration: none;
-    margin: 10px;
-    color: rgb(153, 51, 255);
+  text-decoration: none;
+  margin: 10px;
+  color: rgb(153, 51, 255);
+  &:hover {
+    color: rgb(255, 0, 127);
   }
-
-  & a:hover {
+  &.active {
     color: rgb(255, 0, 127);
     border-bottom: solid 2px;
   }
 `;
-
 const Header = (props) => {
   return (
     <HeaderBox>
       <Logo>Fruit Emporium</Logo>
       <Linkbox>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Links exact to="/">
+          Home
+        </Links>
+        <Links exact to="/about">
+          About
+        </Links>
       </Linkbox>
     </HeaderBox>
   );
